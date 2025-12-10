@@ -4,7 +4,8 @@ nixPkgs = ["nodejs_20"]
 [phases.install]
 cmds = [
   "rm -rf node_modules package-lock.json || true",
-  "npm install --include=optional"
+  "npm install --include=optional",
+  "npm install --no-save @rollup/rollup-linux-x64-gnu || true"
 ]
 
 [phases.build]
