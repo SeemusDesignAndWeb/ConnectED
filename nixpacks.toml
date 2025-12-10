@@ -5,7 +5,8 @@ nixPkgs = ["nodejs_20"]
 cmds = [
   "rm -rf node_modules package-lock.json || true",
   "npm install --include=optional",
-  "npm install --no-save @rollup/rollup-linux-x64-gnu || true"
+  "npm install --no-save @rollup/rollup-linux-x64-gnu || true",
+  "rm -rf node_modules/@esbuild/darwin-* node_modules/@rollup/rollup-darwin-* || true"
 ]
 
 [phases.build]
