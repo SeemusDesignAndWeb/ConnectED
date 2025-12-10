@@ -1,6 +1,9 @@
 {
 	"/": [],
 	"/about": [],
+	"/api/init-database": [
+		"src/routes/api/init-database/+server.js"
+	],
 	"/contact": [],
 	"/students": [],
 	"/universities": []

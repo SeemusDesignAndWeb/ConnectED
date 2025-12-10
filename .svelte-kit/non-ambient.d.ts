@@ -27,18 +27,20 @@ export {};
 
 declare module "$app/types" {
 	export interface AppTypes {
-		RouteId(): "/" | "/about" | "/contact" | "/students" | "/universities";
+		RouteId(): "/" | "/about" | "/api" | "/api/init-database" | "/contact" | "/students" | "/universities";
 		RouteParams(): {
 			
 		};
 		LayoutParams(): {
 			"/": Record<string, never>;
 			"/about": Record<string, never>;
+			"/api": Record<string, never>;
+			"/api/init-database": Record<string, never>;
 			"/contact": Record<string, never>;
 			"/students": Record<string, never>;
 			"/universities": Record<string, never>
 		};
-		Pathname(): "/" | "/about" | "/about/" | "/contact" | "/contact/" | "/students" | "/students/" | "/universities" | "/universities/";
+		Pathname(): "/" | "/about" | "/about/" | "/api" | "/api/" | "/api/init-database" | "/api/init-database/" | "/contact" | "/contact/" | "/students" | "/students/" | "/universities" | "/universities/";
 		ResolvedPathname(): `${"" | `/${string}`}${ReturnType<AppTypes['Pathname']>}`;
 		Asset(): "/favicon.png" | string & {};
 	}

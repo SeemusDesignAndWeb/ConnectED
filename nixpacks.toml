@@ -2,7 +2,10 @@
 nixPkgs = ["nodejs_20"]
 
 [phases.install]
-cmds = ["npm ci --include=optional"]
+cmds = [
+  "rm -rf node_modules || true",
+  "npm ci --include=optional"
+]
 
 [phases.build]
 cmds = ["npm run build"]
